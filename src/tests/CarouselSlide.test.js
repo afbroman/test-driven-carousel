@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import CarouselSlide from '../CarouselSlide';
 
 describe('CarouselSlide', () => {
@@ -18,15 +18,15 @@ describe('CarouselSlide', () => {
     expect(wrapper.type()).toBe('figure');
   });
 
-  it('renders an <img> and a <figcaption> as children', () => {
-    expect(wrapper.childAt(0).type()).toBe('img');
+  it('renders props.Img and a <figcaption> as children', () => {
+    expect(wrapper.childAt(0).type()).toBe(CarouselSlide.defaultProps.Img);
     expect(wrapper.childAt(1).type()).toBe('figcaption');
   });
 
   it('passes `imgUrl` through to the <img>', () => {
     const imgUrl = 'https://example.com/image.png';
     wrapper.setProps({ imgUrl });
-    const img = wrapper.find('img');
+    const img = wrapper.find(CarouselSlide.defaultProps.Img);
     expect(img.prop('src')).toBe(imgUrl);
   });
 

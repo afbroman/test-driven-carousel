@@ -12,6 +12,7 @@ const Img = styled.img`
 `;
 
 const CarouselSlide = ({
+  Img,
   imgUrl,
   imgHeight,
   description,
@@ -27,6 +28,7 @@ const CarouselSlide = ({
 );
 
 CarouselSlide.propTypes = {
+  Img: PropTypes.elementType,
   imgHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   imgUrl: PropTypes.string.isRequired,
   description: PropTypes.node.isRequired,
@@ -34,6 +36,7 @@ CarouselSlide.propTypes = {
 };
 
 CarouselSlide.defaultProps = {
+  Img: Img,
   imgHeight: 500,
 };
 
