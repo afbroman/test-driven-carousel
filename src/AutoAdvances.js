@@ -47,6 +47,7 @@ export default (Component, propName, upperBoundPropName) =>
       } else if (this.props[upperBoundPropName] != null) {
         upperBound = this.props[upperBoundPropName].length;
       }
+
       this._timer = setTimeout(() => {
         this.props[`${propName}Increment`](upperBound);
       }, this.props.autoAdvanceDelay);
