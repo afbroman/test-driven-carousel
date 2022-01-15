@@ -50,7 +50,7 @@ describe('Carousel', () => {
       jest.useFakeTimers();
       const autoAdvanceDelay = 10e3;
       mounted = mount(
-        <Carousel slides={slides} autoAdvancedDelay={autoAdvanceDelay} />,
+        <Carousel slides={slides} autoAdvanceDelay={autoAdvanceDelay} />,
       );
       jest.advanceTimersByTime(autoAdvanceDelay);
       mounted.update();
