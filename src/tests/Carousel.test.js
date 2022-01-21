@@ -5,6 +5,8 @@ import Carousel, { Carousel as CoreCarousel } from '../Carousel';
 import CarouselButton from '../CarouselButton';
 import CarouselSlide from '../CarouselSlide';
 
+jest.useFakeTimers();
+
 describe('Carousel', () => {
   const slides = [
     {
